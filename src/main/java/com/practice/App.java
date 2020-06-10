@@ -1,6 +1,5 @@
 package com.practice;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -18,12 +17,13 @@ public class App {
 //    		t1.setProcessor(p1);
 //    		t1.display();
 
-		Laptop t2 = new Laptop();
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); 
-		Processor p2 = context.getBean(Processor.class);
-		HardDrive h2  = context.getBean(HardDrive.class);
-		t2.setHardDrive(h2);
-		t2.setProcessor(p2);
+	//	Laptop t2 = new Laptop();
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		Laptop t2 = context.getBean(Laptop.class);
+//		Processor p2 = context.getBean(Processor.class);
+//		HardDrive h2  = context.getBean(HardDrive.class);
+//		t2.setHardDrive(h2);
+//		t2.setProcessor(p2);
 		t2.display();
 	}
 }

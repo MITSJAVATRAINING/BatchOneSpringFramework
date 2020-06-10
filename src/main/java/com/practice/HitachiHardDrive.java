@@ -1,10 +1,12 @@
 package com.practice;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HitachiHardDrive implements HardDrive {
 
+	@Value("512")
 	int size;
 
 	public int getSize() {
